@@ -34,6 +34,7 @@ $gradient-blue-cyan: linear-gradient(
 
   @media only screen and (max-width: 390px) {
     width: 23rem;
+    gap: 1rem; // Adjust the gap for smaller screens
   }
 }
 
@@ -54,6 +55,7 @@ $gradient-blue-cyan: linear-gradient(
   @media only screen and (max-width: 390px) {
     padding: 0;
     height: 24rem;
+    margin-bottom: 5rem;
   }
 }
 
@@ -79,8 +81,8 @@ $gradient-blue-cyan: linear-gradient(
   object-fit: cover;
 
   @media only screen and (max-width: 390px) {
-    width: 100%;
-    height: 100%;
+    width: 23rem;
+    height: 12.8rem;
   }
 }
 

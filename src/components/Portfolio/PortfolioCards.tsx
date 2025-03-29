@@ -5,7 +5,8 @@ export default function Cards(project: IPortfolioCard) {
     return (
         <div className="card text-bg-dark">
             <h5 className="cardTitle">{project.name}</h5>
-            <div>
+
+            <div className="imageWrapper">
                 <img className="cardImg" src={project.image} alt={project.description} />
             </div>
 
@@ -24,5 +25,6 @@ export default function Cards(project: IPortfolioCard) {
                 ></a>
             </div>
         </div>
+
     );
 }

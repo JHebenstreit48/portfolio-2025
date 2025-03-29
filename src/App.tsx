@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from '@/components/HeaderAndNav/Header';
-import Footer from '@/components/Footer'; // Assuming you have a Footer component
+import Footer from '@/components/Footer';
 
 function App() {
   useEffect(() => {

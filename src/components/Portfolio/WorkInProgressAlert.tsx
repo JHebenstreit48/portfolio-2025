@@ -1,4 +1,4 @@
-import '@/css/WorkInProgressAlert.css'
+import '@/SCSS/Portfolio/WorkInProgressAlert.scss';
 
 // This will cause this Typescript error: `Type is not assignable to type IconProp`
 

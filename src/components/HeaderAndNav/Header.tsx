@@ -1,5 +1,5 @@
 import Navigation from "@/components/HeaderAndNav/Navigation";
-import "@/SCSS/HeaderAndNav/Header.scss";
+import "@/SCSS/HeaderNavAndFooter/Header.scss";
 
 export default function Header() {
   return (

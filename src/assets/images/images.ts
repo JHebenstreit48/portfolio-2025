@@ -4,7 +4,7 @@ import StarWars from "@/assets/images/star-wars-site.png";
 import CodingNotesV1 from "@/assets/images/coding-notes-v1.png";
 import ProfilePicture from "@/assets/images/profilePicture.jpg";
 import ALUTracker from "@/assets/images/AsphaltLegendsUniteTracker.png";
-import NetNotes from "@/assets/images/netnotes.png";
+import NetNotes from "@/assets/images/NetNotes.png";
 
 export const Images = {
   Asphalt,

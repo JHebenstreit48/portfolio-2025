@@ -1,4 +1,4 @@
-import '@/SCSS/Footer.scss'
+import '@/SCSS/HeaderNavAndFooter/Footer.scss';
 
 export default function Footer() {
     return (

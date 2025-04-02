@@ -2,7 +2,7 @@
    Variables
    ============================= */
    $highlight-color: rgb(109, 9, 172);
-   $glow-color: rgb(0, 195, 255);
+   $glow-color: #000;
    $shadow-color: rgb(0, 219, 248);
    $gradient-purple-orange: linear-gradient(
     to bottom,
@@ -21,7 +21,7 @@
    $width-form: 50rem;
    $width-input: 70%;
    $width-button: 23%;
-   $font-md: 18px;
+   $font-md: 1.2rem;
    
    /* =============================
       Contact Form Container
@@ -33,7 +33,6 @@
      align-items: center;
      flex-direction: column;
      border: 2px solid $highlight-color;
-     text-shadow: 4px 2px 9px $glow-color;
      box-shadow: 0px 1px 25px $shadow-color;
      background-image: $gradient-purple-orange;
      border-radius: $radius-lg;
@@ -54,10 +53,11 @@
       Labels
       ============================= */
    .label {
-     text-align: left;
      font-size: $font-md;
+     font-weight: bold;
      color: $accent-orange;
      margin: 10px;
+     text-shadow: 2px 3px 2px $glow-color;
    }
    
    /* =============================

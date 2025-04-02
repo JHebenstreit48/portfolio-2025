@@ -32,7 +32,11 @@ import {
 import { DiVisualstudio } from 'react-icons/di';
 import { BiLogoVisualStudio } from 'react-icons/bi';
 import { BsTools } from 'react-icons/bs';
-import { TbBrandReactNative } from 'react-icons/tb'
+import { TbBrandReactNative } from 'react-icons/tb';
+
+import { useState } from 'react';
+import SkillModal from '@/components/ResumeAndSkills/SkillsModal';
+import { skillResources } from '@/data/skillsResources';
 import '@/SCSS/Resume/Skills.scss';
 
 const skillsSections = [
@@ -165,6 +169,19 @@ const skillsSections = [
 ];
 
 const Skills = () => {
+  const [modalData, setModalData] = useState<{
+    skillName: string;
+    resources: { label: string; url: string }[];
+  } | null>(null);
+
+  const handleSkillClick = (skillName: string) => {
+    const key = skillName.replace(/\s|\./g, '');
+    const resources = skillResources[key];
+    if (resources) {
+      setModalData({ skillName, resources });
+    }
+  };
+
   return (
     <div className="skillsContainer">
       {skillsSections.map((section) => (
@@ -195,22 +212,38 @@ const Skills = () => {
                   )}
                 </h3>
                 <div className="skillsGrid">
-                  {subcategory.skills.map((skill) => (
-                    <div key={skill.name} className="skillCard">
-                      {skill.icon ? (
-                        <skill.icon className="icon" style={{ color: skill.color }} />
-                      ) : (
-                        <div className="icon">🔧</div>
-                      )}
-                      <p className="label">{skill.name}</p>
-                    </div>
-                  ))}
+                  {subcategory.skills.map((skill) => {
+                    const skillKey = skill.name.replace(/\s|\./g, '');
+                    return (
+                      <div
+                        key={skill.name}
+                        className="skillCard"
+                        onClick={() => handleSkillClick(skill.name)}
+                        style={{ cursor: skillResources[skillKey] ? 'pointer' : 'default' }}
+                        title={skillResources[skillKey] ? 'Click to view resources' : ''}
+                      >
+                        {skill.icon ? (
+                          <skill.icon className="icon" style={{ color: skill.color }} />
+                        ) : (
+                          <div className="icon">🔧</div>
+                        )}
+                        <p className="label">{skill.name}</p>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             ) : null
           )}
         </div>
       ))}
+      {modalData && (
+        <SkillModal
+          skillName={modalData.skillName}
+          resources={modalData.resources}
+          onClose={() => setModalData(null)}
+        />
+      )}
     </div>
   );
 };

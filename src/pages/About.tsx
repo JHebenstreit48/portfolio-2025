@@ -1,5 +1,6 @@
 import ProfilePicture from '@/assets/images/profilePicture.jpg';
-import '@/SCSS/AboutMe.scss';
+import '@/SCSS/AboutMe/AboutMe.scss';
+import Bio from '@/components/About/Bio';
 
 export default function About() {
   return (
@@ -8,24 +9,15 @@ export default function About() {
 
       <div>
 
-        <img className='profilePicture' src={ProfilePicture} alt='Profile Picture' />
-
-        <div className='about'>
-
-          <p className="bio">
-            I am a Full-Stack Web Developer with a background in photography and music. I have a passion for music, automotive, photography, and gaming. I recently completed a 6 month long Full-Stack Web Development coding bootcamp through Washington University St. Louis in partnership with Edx. I am skilled in HTML, CSS, JavaScript, TypeScript, Node.js, Express.js, PostgreSQL, and React. I am a creative thinker and a team player. I am excited to bring my skills to any team.
-          </p>
-
+        <div>
+          <img className='profilePicture' src={ProfilePicture} alt='Profile Picture' />
         </div>
 
+        <Bio />
 
       </div>
 
     </>
-
-
-
-
 
   );
 }

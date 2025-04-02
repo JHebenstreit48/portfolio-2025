@@ -12,23 +12,21 @@ interface SkillsSubsectionProps {
 const SkillsSubsection = ({ type, level, label, skills, onSkillClick }: SkillsSubsectionProps) => {
   const renderTitle = () => {
     if (type === 'proficiency') {
-      return (
-        <>
-          {level === 'fluent' && '✅ Fluent'}
-          {level === 'learning' && '🧠 Learning'}
-          {level === 'refreshing' && '🔁 Refreshing'}
-        </>
-      );
+      if (level === 'fluent') return '✅ Fluent';
+      if (level === 'learning') return '🧠 Learning';
+      if (level === 'refreshing') return '🔁 Refreshing';
     }
 
     if (type === 'tools') {
+      let icon = '';
+      if (level === 'fluent') icon = '✅';
+      else if (level === 'learning') icon = '🧠';
+      else if (level === 'refreshing') icon = '🔁';
+
       return (
         <span className="toolsHeader">
           <BsTools className="toolsIcon" />
-          {level === 'fluent' && '✅ '}
-          {level === 'learning' && '🧠 '}
-          {level === 'refreshing' && '🔁 '}
-          {label}
+          {icon} {label || 'Tools'}
         </span>
       );
     }
@@ -43,11 +41,7 @@ const SkillsSubsection = ({ type, level, label, skills, onSkillClick }: SkillsSu
       </h3>
       <div className="skillsGrid">
         {skills.map((skill) => (
-          <SkillsCard
-            key={skill.name}
-            skill={skill}
-            onClick={onSkillClick}
-          />
+          <SkillsCard key={skill.name} skill={skill} onClick={onSkillClick} />
         ))}
       </div>
     </div>

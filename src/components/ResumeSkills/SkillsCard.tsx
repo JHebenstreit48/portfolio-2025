@@ -1,4 +1,4 @@
-import { skillResources } from '@/data/skillsResources';
+import { SkillsResources } from '@/data/SkillsResources';
 
 interface SkillsCardProps {
   skill: {
@@ -11,7 +11,7 @@ interface SkillsCardProps {
 
 const SkillsCard = ({ skill, onClick }: SkillsCardProps) => {
   const skillKey = skill.name.replace(/\s|\./g, '');
-  const hasResources = !!skillResources[skillKey];
+  const hasResources = !!SkillsResources[skillKey];
 
   return (
     <div

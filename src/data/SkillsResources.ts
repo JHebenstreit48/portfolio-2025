@@ -1,4 +1,4 @@
-export const skillResources: Record<string, { label: string; url: string }[]> =
+export const SkillsResources: Record<string, { label: string; url: string }[]> =
   {
     HTML: [
       {

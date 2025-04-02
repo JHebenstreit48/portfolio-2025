@@ -2,7 +2,7 @@ import { useState } from 'react';
 import SkillsModal from '@/components/ResumeSkills/SkillsModal';
 import SkillsSection from '@/components/ResumeSkills/SkillsSection';
 import { SkillsList } from '@/data/SkillsList';
-import { skillResources } from '@/data/skillsResources';
+import { SkillsResources } from '@/data/SkillsResources';
 import '@/SCSS/Resume/Skills.scss';
 
 const Skills = () => {
@@ -13,7 +13,7 @@ const Skills = () => {
 
   const handleSkillClick = (skillName: string) => {
     const key = skillName.replace(/\s|\./g, '');
-    const resources = skillResources[key];
+    const resources = SkillsResources[key];
 
     if (resources) {
       setTimeout(() => {

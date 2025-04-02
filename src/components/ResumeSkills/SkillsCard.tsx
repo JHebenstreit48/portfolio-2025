@@ -1,11 +1,13 @@
 import { SkillsResources } from '@/data/SkillsResources';
 
+interface Skill {
+  name: string;
+  icon: React.ElementType | null;
+  color?: string;
+}
+
 interface SkillsCardProps {
-  skill: {
-    name: string;
-    icon: any;
-    color?: string;
-  };
+  skill: Skill;
   onClick: (skillName: string) => void;
 }
 

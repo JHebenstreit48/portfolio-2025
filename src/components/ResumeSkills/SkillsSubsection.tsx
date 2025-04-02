@@ -1,43 +1,30 @@
-import { BsTools } from 'react-icons/bs';
 import SkillsCard from '@/components/ResumeSkills/SkillsCard';
 
+interface Skill {
+  name: string;
+  icon: React.ElementType | null;
+  color?: string;
+}
+
 interface SkillsSubsectionProps {
-  type: string;
-  level?: string;
-  label?: string;
-  skills: any[];
+  type: 'proficiency' | 'tools';
+  level?: 'fluent' | 'learning' | 'refreshing';
+  skills: Skill[];
   onSkillClick: (skillName: string) => void;
 }
 
-const SkillsSubsection = ({ type, level, label, skills, onSkillClick }: SkillsSubsectionProps) => {
-  const renderTitle = () => {
-    if (type === 'proficiency') {
-      if (level === 'fluent') return '✅ Fluent';
-      if (level === 'learning') return '🧠 Learning';
-      if (level === 'refreshing') return '🔁 Refreshing';
-    }
-
-    if (type === 'tools') {
-      let icon = '';
-      if (level === 'fluent') icon = '✅';
-      else if (level === 'learning') icon = '🧠';
-      else if (level === 'refreshing') icon = '🔁';
-
-      return (
-        <span className="toolsHeader">
-          <BsTools className="toolsIcon" />
-          {icon} {label || 'Tools'}
-        </span>
-      );
-    }
-
-    return null;
+const SkillsSubsection = ({ type, level, skills, onSkillClick }: SkillsSubsectionProps) => {
+  const getLabel = () => {
+    if (level === 'fluent') return '✅ Fluent';
+    if (level === 'learning') return '🧠 Learning';
+    if (level === 'refreshing') return '🔁 Refreshing';
+    return '';
   };
 
   return (
     <div className="skillsSubsection">
-      <h3 className={type === 'tools' ? 'toolsTitle' : `subsectionTitle ${level}`}>
-        {renderTitle()}
+      <h3 className={type === 'tools' ? 'subsectionTitle toolSub' : `subsectionTitle ${level}`}>
+        {getLabel()}
       </h3>
       <div className="skillsGrid">
         {skills.map((skill) => (

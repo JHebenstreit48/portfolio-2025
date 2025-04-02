@@ -1,7 +1,6 @@
-import Footer from "@/components/Footer";
-import Cards from "@/components/PortfolioCards";
-import Data from "@/components/PortfolioData";
-import WorkInProgress from "@/components/WorkInProgressAlert";
+import Cards from "@/components/Portfolio/PortfolioCards";
+import Data from "@/components/Portfolio/PortfolioData";
+// import WorkInProgress from "@/components/Portfolio/WorkInProgressAlert";
 
 export default function Portfolio() {
     return (
@@ -10,11 +9,11 @@ export default function Portfolio() {
             <h1 className='pageHeader'>Portfolio</h1>
 
             <div>
-                <WorkInProgress />
+                {/* <WorkInProgress /> */}
             </div>
 
 
-            <div className="card-container">
+            <div className="cardContainer">
                 <div className="row">
 
                     {Data.map((project, index) => (
@@ -31,8 +30,6 @@ export default function Portfolio() {
 
                 </div>
             </div>
-
-            <Footer />
 
         </>
     )

@@ -1,0 +1,121 @@
+/* =============================
+   Variables
+   ============================= */
+$deep-blue: rgb(16, 7, 97);
+$teal: rgb(2, 211, 211);
+$gold: rgb(255, 191, 71);
+
+$gradient-blue-cyan: linear-gradient(
+  to bottom,
+  $deep-blue 0%,
+  $teal 33%,
+  $deep-blue 115%
+);
+
+/* =============================
+      Card Layout Wrappers (from Portfolio.tsx)
+      ============================= */
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  margin: 12rem auto;
+
+  @media only screen and (max-width: 390px) {
+    margin-top: 15rem;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 90rem;
+
+  @media only screen and (max-width: 390px) {
+    width: 23rem;
+    gap: 1rem; // Adjust the gap for smaller screens
+  }
+}
+
+/* =============================
+      Card Box
+      ============================= */
+.card {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35rem;
+  height: 35rem;
+  background-image: $gradient-blue-cyan;
+  border-radius: 2rem;
+  padding-bottom: 2rem;
+
+  @media only screen and (max-width: 390px) {
+    padding: 0;
+    height: 24rem;
+    margin-bottom: 5rem;
+  }
+}
+
+.cardTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $gold;
+  font-size: 1.9rem;
+  margin-top: 1rem;
+
+  @media only screen and (max-width: 390px) {
+    width: 90%;
+  }
+}
+
+/* =============================
+      Image + Overlay
+      ============================= */
+.cardImg {
+  height: 25rem;
+  width: 35rem;
+  object-fit: cover;
+
+  @media only screen and (max-width: 390px) {
+    width: 23rem;
+    height: 12.8rem;
+  }
+}
+
+/* =============================
+      Icons
+      ============================= */
+.icon {
+  font-size: 30px;
+
+  @media only screen and (max-width: 390px) {
+  }
+}
+
+.liveAndDeploy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .githubIcon {
+    color: $gold;
+    text-decoration: none;
+    font-size: 2.2rem;
+    margin-top: 2rem;
+  }
+
+  .deploymentIcon {
+    color: $gold;
+    margin-left: 10rem;
+    text-decoration: none;
+    font-size: 2.2rem;
+    margin-top: 2rem;
+  }
+
+  @media only screen and (max-width: 390px) {
+  }
+}

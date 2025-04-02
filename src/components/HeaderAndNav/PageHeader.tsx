@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import Navigation from "@/components/Navigation";
+import Navigation from "@/components/HeaderAndNav/Navigation";
 
 export default function PageHeader() {
   const location = useLocation();

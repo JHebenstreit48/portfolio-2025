@@ -1,0 +1,29 @@
+/* =============================
+   Variables (used by .profilePicture only)
+   ============================= */
+   $border-highlight: rgb(169, 30, 255);
+   $box-glow: rgb(0, 219, 248);
+   $radius-circle: 50%;
+   
+   /* =============================
+      Profile Picture
+      ============================= */
+   .profilePicture {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 14rem auto 5rem auto;
+     border-radius: $radius-circle;
+     width: 20rem;
+     height: 20rem;
+     border: 2px solid $border-highlight;
+     box-shadow: 0 0 10px $box-glow;
+   
+     // ========== Responsive
+     @media only screen and (max-width: 390px) {
+       width: 170px;
+       height: 170px;
+       margin: 17rem auto 0 auto;
+     }
+   }
+   

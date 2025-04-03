@@ -118,53 +118,29 @@
    /* =============================
       Skill Grid & Cards
       ============================= */
-      .skillsGrid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-        justify-content: center;
-      
-        @media only screen and (max-width: 390px) {
-          gap: 1rem;
-        }
-      }
-      
-      .skillWithDropdown {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 0.5rem;
-        position: relative;
-      }
-      
-      .skillGridItem {
-        width: 9rem;
-        height: 9rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      
-      .nestedSkillsGrid {
-        margin-top: 0.5rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-        padding: 0.6rem 1rem;
-        border-radius: 1rem;
-        background-color: rgba(0, 0, 0, 0.5);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-        backdrop-filter: blur(6px);
-        z-index: 1;
-      
-        @media only screen and (max-width: 390px) {
-          flex-direction: column;
-          align-items: center;
-        }
-      }
-      
+   .skillsGrid {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 2rem;
+     justify-content: center;
+   
+     @media only screen and (max-width: 390px) {
+       gap: 1rem;
+     }
+   }
+   
+   .skillWrapper {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     width: 9rem;
+     min-height: 9rem;
+   
+     @media only screen and (max-width: 390px) {
+       width: 8rem;
+       min-height: 8rem;
+     }
+   }
    
    .skillCard {
      background: $skill-bg;
@@ -241,32 +217,24 @@
    }
    
    /* =============================
-      Nested / Collapsible Groups
+      Nested Skills (Dropdown)
       ============================= */
-   .nestedSkillWrapper {
+   .nestedSkillsGrid {
+     margin-top: 0.6rem;
      display: flex;
-     flex-direction: column;
-     align-items: center;
-     position: relative;
+     justify-content: center;
+     gap: 5rem;
+     margin-top: 2rem;
+     background-color: transparent;
+     border: none;
+     box-shadow: none;
    
-     .nestedSkillsGrid {
-       margin-top: 0.8rem;
+     &.hidden {
+       display: none;
+     }
+   
+     &.visible {
        display: flex;
-       flex-wrap: wrap;
-       justify-content: center;
-       gap: 1rem;
-       padding: 0.6rem 1rem;
-       border-radius: 1rem;
-       background-color: unset;
-       border: unset;
-       box-shadow: unset;
-       backdrop-filter: blur(6px);
-       z-index: 1;
-   
-       @media only screen and (max-width: 390px) {
-         flex-direction: column;
-         align-items: center;
-       }
      }
    }
    

@@ -1,5 +1,3 @@
-// src/data/SkillsList.ts
-
 import {
   FaReact,
   FaNodeJs,
@@ -44,7 +42,9 @@ import { BiLogoVisualStudio } from "react-icons/bi";
 import { BsWrench } from "react-icons/bs";
 import { TbBrandReactNative } from "react-icons/tb";
 
-export const SkillsList = [
+import type { Subcategory } from "@/components/ResumeSkills/Skills";
+
+export const SkillsList: { title: string; subcategories: Subcategory[] }[] = [
   {
     title: "Web Development",
     subcategories: [
@@ -165,7 +165,7 @@ export const SkillsList = [
         toolsByLevel: {
           refreshing: [{ name: "Packet Tracer", icon: null }],
           learning: [
-            { name: "GNS3", icon: BsWrench, color: "#000" }, // placeholder
+            { name: "GNS3", icon: BsWrench, color: "#000" },
             { name: "Wireshark", icon: SiWireshark, color: "#000" },
           ],
         },
@@ -191,6 +191,20 @@ export const SkillsList = [
         skills: [
           { name: "Visual Studio", icon: DiVisualstudio, color: "#5C2D91" },
         ],
+      },
+      {
+        type: "tools",
+        label: "Tools",
+        toolsByLevel: {
+          fluent: [
+            { name: "VS Code", icon: BiLogoVisualStudio, color: "#007ACC" },
+            { name: "Git", icon: FaGitAlt, color: "#F05032" },
+            { name: "GitHub", icon: FaGithub, color: "#fff" },
+          ],
+          learning: [
+            { name: "Visual Studio", icon: DiVisualstudio, color: "#5C2D91" },
+          ],
+        },
       },
     ],
   },

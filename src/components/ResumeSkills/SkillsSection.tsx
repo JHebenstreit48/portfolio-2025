@@ -1,9 +1,14 @@
+import { useState } from 'react';
 import SkillsSubsection from '@/components/ResumeSkills/SkillsSubsection';
+import SkillsModal from '@/components/ResumeSkills/SkillsModal';
+import { SkillsResources } from '@/data/SkillsResources';
 
 interface Skill {
   name: string;
   icon: React.ElementType | null;
   color?: string;
+  children?: Skill[];
+  resourceKey?: string;
 }
 
 interface ProficiencySubcategory {
@@ -29,10 +34,43 @@ type Subcategory = ProficiencySubcategory | ToolSubcategory;
 interface SkillsSectionProps {
   title: string;
   subcategories: Subcategory[];
-  onSkillClick: (skillName: string) => void;
 }
 
-const SkillsSection = ({ title, subcategories, onSkillClick }: SkillsSectionProps) => {
+const SkillsSection = ({ title, subcategories }: SkillsSectionProps) => {
+  const [selectedSkill, setSelectedSkill] = useState<string | null>(null);
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const handleSkillClick = (skillName: string) => {
+    const skillObj = findSkillByName(skillName);
+    const key = skillObj?.resourceKey || skillName.replace(/\s|\./g, '');
+    const resources = SkillsResources[key];
+
+    if (resources) {
+      setSelectedSkill(skillName);
+      setModalOpen(true);
+    } else {
+      console.warn(`No resources found for: ${key}`);
+    }
+  };
+
+  const findSkillByName = (name: string): Skill | undefined => {
+    for (const sub of subcategories) {
+      const skillList: Skill[] =
+        sub.type === 'proficiency'
+          ? sub.skills
+          : Object.values(sub.toolsByLevel || {}).flat();
+
+      for (const skill of skillList) {
+        if (skill.name === name) return skill;
+        if (skill.children) {
+          const childMatch = skill.children.find((child: Skill) => child.name === name);
+          if (childMatch) return childMatch;
+        }
+      }
+    }
+    return undefined;
+  };
+
   const renderToolsSubcategories = (subcategory: ToolSubcategory) => {
     const { toolsByLevel } = subcategory;
 
@@ -48,7 +86,7 @@ const SkillsSection = ({ title, subcategories, onSkillClick }: SkillsSectionProp
               type="tools"
               level={level}
               skills={toolsByLevel[level]!}
-              onSkillClick={onSkillClick}
+              onSkillClick={handleSkillClick}
             />
           ) : null
         )}
@@ -59,15 +97,16 @@ const SkillsSection = ({ title, subcategories, onSkillClick }: SkillsSectionProp
   return (
     <div className="skillsSection">
       <h2 className="skillsTitle">{title}</h2>
+
       {subcategories.map((subcategory, index) => {
-        if (subcategory.type === 'proficiency' && subcategory.skills?.length) {
+        if (subcategory.type === 'proficiency') {
           return (
             <SkillsSubsection
               key={`pro-${subcategory.level}-${index}`}
               type="proficiency"
               level={subcategory.level}
               skills={subcategory.skills}
-              onSkillClick={onSkillClick}
+              onSkillClick={handleSkillClick}
             />
           );
         }
@@ -78,6 +117,16 @@ const SkillsSection = ({ title, subcategories, onSkillClick }: SkillsSectionProp
 
         return null;
       })}
+
+      {modalOpen && selectedSkill && (
+        <SkillsModal
+          skillName={selectedSkill}
+          resources={SkillsResources[
+            findSkillByName(selectedSkill)?.resourceKey || selectedSkill.replace(/\s|\./g, '')
+          ]}
+          onClose={() => setModalOpen(false)}
+        />
+      )}
     </div>
   );
 };

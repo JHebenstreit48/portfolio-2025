@@ -3,13 +3,21 @@ export const SkillsResources: Record<string, { label: string; url: string }[]> =
     HTML: [
       {
         label: "MDN HTML Docs",
-        url: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+        url: "https://developer.mozilla.org/en-US/docs/Web/HTML"
       },
+      {
+        label: "W3Schools HTML Tutorial",
+        url: "https://www.w3schools.com/html/",
+      }
     ],
     CSS: [
       {
         label: "MDN CSS Docs",
         url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+      },
+      {
+        label: "W3Schools CSS Tutorial",
+        url: "https://www.w3schools.com/css/",
       },
     ],
     JavaScript: [

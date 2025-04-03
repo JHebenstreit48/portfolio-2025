@@ -5,6 +5,37 @@ import { SkillsList } from '@/data/SkillsList';
 import { SkillsResources } from '@/data/SkillsResources';
 import '@/SCSS/Resume/Skills.scss';
 
+export interface Skill {
+  name: string;
+  icon: React.ElementType | null;
+  color?: string;
+  children?: Skill[];
+  resourceKey?: string; // Optional key for resources
+}
+
+export interface ProficiencySubcategory {
+  type: 'proficiency';
+  level: 'fluent' | 'learning' | 'refreshing';
+  skills: Skill[];
+}
+
+export interface ToolSubcategory {
+  type: 'tools';
+  label: string;
+  toolsByLevel: {
+    fluent?: Skill[];
+    learning?: Skill[];
+    refreshing?: Skill[];
+  };
+}
+
+export type Subcategory = ProficiencySubcategory | ToolSubcategory;
+
+export interface SkillSection {
+  title: string;
+  subcategories: Subcategory[];
+}
+
 const Skills = () => {
   const [modalData, setModalData] = useState<{
     skillName: string;

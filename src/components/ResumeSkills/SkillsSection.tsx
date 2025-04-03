@@ -34,6 +34,7 @@ type Subcategory = ProficiencySubcategory | ToolSubcategory;
 interface SkillsSectionProps {
   title: string;
   subcategories: Subcategory[];
+  onSkillClick: (skillName: string) => void; // ✅ ADD THIS
 }
 
 const SkillsSection = ({ title, subcategories }: SkillsSectionProps) => {

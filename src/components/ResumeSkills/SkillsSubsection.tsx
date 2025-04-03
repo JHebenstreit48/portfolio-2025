@@ -6,6 +6,7 @@ interface Skill {
   icon: React.ElementType | null;
   color?: string;
   children?: Skill[];
+  resourceKey?: string;
 }
 
 interface SkillsSubsectionProps {

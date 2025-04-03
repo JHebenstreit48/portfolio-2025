@@ -50,15 +50,16 @@ const SkillWithChildren = ({
   const hasChildren = !!skill.children?.length;
 
   return (
-    <div className="nestedSkillWrapper">
+    <div className="skillWrapper">
       <SkillsCard
         skill={skill}
         isExpanded={isExpanded}
         onClick={onClick}
         onToggle={hasChildren ? () => setIsExpanded((prev) => !prev) : undefined}
       />
-      {hasChildren && isExpanded && (
-        <div className="nestedSkillsGrid">
+
+      {hasChildren && (
+        <div className={`nestedSkillsGrid ${isExpanded ? 'visible' : 'hidden'}`}>
           {skill.children!.map((child) => (
             <SkillsCard key={child.name} skill={child} onClick={onClick} />
           ))}

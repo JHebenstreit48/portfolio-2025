@@ -37,10 +37,27 @@ import {
   SiRider,
   SiWireshark,
 } from "react-icons/si";
-import { DiVisualstudio, DiUnitySmall } from "react-icons/di";
-import { BiLogoVisualStudio } from "react-icons/bi";
-import { BsWrench } from "react-icons/bs";
+import
+{
+  DiVisualstudio,
+  DiUnitySmall
+} from "react-icons/di";
+import
+{
+  BiLogoVisualStudio,
+  BiNetworkChart
+} from "react-icons/bi";
+import
+{
+  BsCalculator,
+  BsWrench
+} from "react-icons/bs";
 import { TbBrandReactNative } from "react-icons/tb";
+import
+{
+  MdLayers,
+  MdVpnLock
+} from "react-icons/md"
 
 import type { Subcategory } from "@/components/ResumeSkills/Skills";
 
@@ -152,18 +169,21 @@ export const SkillsList: { title: string; subcategories: Subcategory[] }[] = [
         level: "refreshing",
         skills: [
           { name: "Cisco", icon: SiCisco, color: "#1BA0D7" },
-          { name: "Security Protocols", icon: null },
+          { name: "Security Protocols", icon: MdVpnLock, color: "#11B5E4" },
           { name: "Networking", icon: FaNetworkWired, color: "#0AC1D6" },
           { name: "Wireless", icon: FaWifi, color: "#0AC1D6" },
-          { name: "Subnetting", icon: null },
-          { name: "OSI Model", icon: null },
+          { name: "Subnetting", icon: BsCalculator, color: "#00C2CB" },
+          { name: "OSI Model", icon: MdLayers, color: "#11B5E4" },
         ],
       },
       {
         type: "tools",
         label: "Tools",
         toolsByLevel: {
-          refreshing: [{ name: "Packet Tracer", icon: null }],
+          refreshing:
+          [
+            { name: "Packet Tracer", icon: BiNetworkChart, color: "#0AC1D6" }
+          ],
           learning: [
             { name: "GNS3", icon: BsWrench, color: "#000" },
             { name: "Wireshark", icon: SiWireshark, color: "#000" },

@@ -45,7 +45,7 @@ const portfolioData: IPortfolioCard[] = [
     },
     {
         image: Images.ALUTracker,
-        name: 'Asphalt Legends Unite Tracker',
+        name: 'ALU Tracker',
         description: 'React version of Asphalt Legends Unite video game site',
         gitHubRepo: 'https://github.com/JHebenstreit48/asphalt-legends-unite-react',
         deployment: 'https://asphalt-legends-unite-react.onrender.com'

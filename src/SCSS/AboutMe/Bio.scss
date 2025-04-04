@@ -1,7 +1,7 @@
 // Variables related to .about, .bio, .currentFocus
 $border-highlight: rgb(169, 30, 255);
 $box-glow: rgb(0, 219, 248);
-$deep-blue: rgb(16, 7, 97);
+$deep-blue: rgba(13, 9, 46, 0.247);
 $teal-shadow: rgb(2, 40, 51);
 
 $gradient-deepblue-cyan: linear-gradient(
@@ -40,21 +40,29 @@ $font-lg: 1.5rem;
     margin: 3rem auto 0 auto;
   }
 
-  .currentFocus {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-}
-
 .bio {
-  margin: 3rem;
-  padding: 2rem;
+  margin-top: 2rem;
+  width: 80%;
+  padding: 0;
 
   @media only screen and (max-width: 390px) {
     margin-top: 1.5rem;
     font-size: 1rem;
     padding: 0 1rem;
   }
+}
+
+.learning {
+  width: 85%;
+  margin: 0 auto 1rem auto;
+}
+
+.currentFocus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 67%;
+  margin: 0 auto;
+}
 }

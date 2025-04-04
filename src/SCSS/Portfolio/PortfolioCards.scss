@@ -1,15 +1,15 @@
 /* =============================
    Variables
    ============================= */
-$deep-blue: rgb(16, 7, 97);
-$teal: rgb(2, 211, 211);
+$deep-blue: rgba(14, 10, 43, 0.534);
+$teal: rgba(13, 87, 224, 0.925);
 $gold: rgb(255, 191, 71);
 
 $gradient-blue-cyan: linear-gradient(
   to bottom,
   $deep-blue 0%,
-  $teal 33%,
-  $deep-blue 115%
+  $teal 41%,
+  $deep-blue 102%
 );
 
 /* =============================
@@ -54,7 +54,7 @@ $gradient-blue-cyan: linear-gradient(
 
   @media only screen and (max-width: 390px) {
     padding: 0;
-    height: 24rem;
+    height: 23rem;
     margin-bottom: 5rem;
   }
 }
@@ -68,7 +68,10 @@ $gradient-blue-cyan: linear-gradient(
   margin-top: 1rem;
 
   @media only screen and (max-width: 390px) {
-    width: 90%;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
   }
 }
 

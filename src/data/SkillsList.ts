@@ -89,7 +89,7 @@ export const SkillsList: { title: string; subcategories: Subcategory[] }[] = [
           { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
           { name: "Vue.js", icon: SiVuedotjs, color: "#42B883" },
           { name: "Sass", icon: FaSass, color: "#CC6699" },
-          { name: "LESS", icon: FaLess, color: "#1D365D" },
+          { name: "Less", icon: FaLess, color: "#1D365D" },
         ],
       },
       {
@@ -142,7 +142,7 @@ export const SkillsList: { title: string; subcategories: Subcategory[] }[] = [
             color: "#A8B9CC",
             children: [
               { name: "C", icon: SiC, color: "#A8B9CC" },
-              { name: "C++", icon: SiCplusplus, color: "#00599C" },
+              { name: "C++", icon: SiCplusplus, color: "#00599C", resourceKey: "CPlusPlus" },
               { name: "C#", icon: SiSharp, color: "#9B4F96", resourceKey: "CSharp" },
             ],
           },
@@ -199,7 +199,7 @@ export const SkillsList: { title: string; subcategories: Subcategory[] }[] = [
         type: "proficiency",
         level: "fluent",
         skills: [
-          { name: "Python", icon: SiPython, color: "#3776AB" },
+          
           { name: "VS Code", icon: BiLogoVisualStudio, color: "#007ACC" },
           { name: "Git", icon: FaGitAlt, color: "#F05032" },
           { name: "GitHub", icon: FaGithub, color: "#fff" },
@@ -210,21 +210,8 @@ export const SkillsList: { title: string; subcategories: Subcategory[] }[] = [
         level: "learning",
         skills: [
           { name: "Visual Studio", icon: DiVisualstudio, color: "#5C2D91" },
+          { name: "Python", icon: SiPython, color: "#3776AB" },
         ],
-      },
-      {
-        type: "tools",
-        label: "Tools",
-        toolsByLevel: {
-          fluent: [
-            { name: "VS Code", icon: BiLogoVisualStudio, color: "#007ACC" },
-            { name: "Git", icon: FaGitAlt, color: "#F05032" },
-            { name: "GitHub", icon: FaGithub, color: "#fff" },
-          ],
-          learning: [
-            { name: "Visual Studio", icon: DiVisualstudio, color: "#5C2D91" },
-          ],
-        },
       },
     ],
   },

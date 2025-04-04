@@ -2,13 +2,15 @@ export const SkillsResources: Record<string, { label: string; url: string }[]> =
   // ===============================
   // Web Development – Front End
   // ===============================
-  Angular: [
+  Angular:
+  [
     {
       label: "Angular Docs",
       url: "https://angular.io/docs"
     }
   ],
-  CSS: [
+  CSS:
+  [
     {
       label: "MDN CSS Docs",
       url: "https://developer.mozilla.org/en-US/docs/Web/CSS"
@@ -18,7 +20,22 @@ export const SkillsResources: Record<string, { label: string; url: string }[]> =
       url: "https://www.w3schools.com/css/"
     }
   ],
-  HTML: [
+  Less:
+  [
+    {
+      label: "Less Docs",
+      url: "https://lesscss.org/"
+    }
+  ],
+  Sass:
+  [
+    {
+      label: "Sass Docs",
+      url: "https://sass-lang.com/documentation/"
+    }
+  ],
+  HTML:
+  [
     {
       label: "MDN HTML Docs",
       url: "https://developer.mozilla.org/en-US/docs/Web/HTML"
@@ -28,37 +45,36 @@ export const SkillsResources: Record<string, { label: string; url: string }[]> =
       url: "https://www.w3schools.com/html/"
     }
   ],
-  JavaScript: [
+  JavaScript:
+  [
     {
       label: "MDN JavaScript Docs",
       url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
     }
   ],
-  TypeScript: [
+  TypeScript:
+  [
     {
       label: "TypeScript Docs",
       url: "https://www.typescriptlang.org/docs"
     }
   ],
-  React: [
+  React:
+  [
     {
       label: "React Docs",
       url: "https://react.dev/"
     }
   ],
-  Sass: [
-    {
-      label: "Sass Docs",
-      url: "https://sass-lang.com/documentation/"
-    }
-  ],
-  Vue: [
+  Vuejs:
+  [
     {
       label: "Vue.js Docs",
       url: "https://vuejs.org/guide/introduction.html"
     }
   ],
-  Drupal: [
+  Drupal:
+  [
     {
       label: "Drupal Docs",
       url: "https://www.drupal.org/docs"
@@ -68,77 +84,100 @@ export const SkillsResources: Record<string, { label: string; url: string }[]> =
   // ===============================
   // Web Development – Back End
   // ===============================
-  Apollo: [
+  Apollo:
+  [
     {
       label: "Apollo GraphQL Docs",
       url: "https://www.apollographql.com/docs/"
     }
   ],
-  GraphQL: [
+  GraphQL:
+  [
     {
       label: "GraphQL Docs",
       url: "https://graphql.org/learn"
     }
   ],
-  Kotlin: [
+  Kotlin:
+  [
     {
       label: "Kotlin Docs",
       url: "https://kotlinlang.org/docs/android-overview.html"
     }
   ],
-  MongoDB: [
+  MongoDB:
+  [
     {
       label: "MongoDB Docs",
       url: "https://www.mongodb.com/docs/"
     }
   ],
-  Node: [
+  Nodejs:
+  [
     {
       label: "Node.js Docs",
       url: "https://nodejs.org/en/docs"
     }
   ],
-  PostgreSQL: [
+  PostgreSQL:
+  [
     {
       label: "PostgreSQL Docs",
       url: "https://www.postgresql.org/docs/"
     }
   ],
-  Python: [
+  Python:
+  [
     {
       label: "Python Docs",
       url: "https://docs.python.org/3/"
+    },
+    {
+      label: "Python Tutorial W3Schools",
+      url: "https://www.w3schools.com/python/"
     }
   ],
 
   // ===============================
   // Mobile Development
   // ===============================
-  Dart: [
+  AndroidStudio:
+  [
+    {
+      label: "Android Studio",
+      url: "https://developer.android.com/studio/write"
+    }
+  ],
+  Dart:
+  [
     {
       label: "Dart Docs",
       url: "https://dart.dev/guides"
     }
   ],
-  Expo: [
+  Expo:
+  [
     {
       label: "Expo Docs",
       url: "https://docs.expo.dev/"
     }
   ],
-  Flutter: [
+  Flutter:
+  [
     {
       label: "Flutter Docs",
       url: "https://docs.flutter.dev/"
     }
   ],
-  ReactNative: [
+  ReactNative:
+  [
     {
       label: "React Native Docs",
       url: "https://reactnative.dev/docs/getting-started"
     }
   ],
-  Swift: [
+  Swift:
+  [
     {
       label: "Swift Docs",
       url: "https://developer.apple.com/documentation/swift"
@@ -148,7 +187,8 @@ export const SkillsResources: Record<string, { label: string; url: string }[]> =
   // ===============================
   // Game Development
   // ===============================
-  C: [
+  C:
+  [
     {
       label: "C Docs Microsoft",
       url: "https://learn.microsoft.com/en-us/cpp/c-language/?view=msvc-170"
@@ -158,13 +198,30 @@ export const SkillsResources: Record<string, { label: string; url: string }[]> =
       url: "https://www.w3schools.com/c/"
     }
   ],
-  CSharp: [
+  CPlusPlus:
+  [
+    {
+      label: "C++ Standards",
+      url: "https://isocpp.org/std/the-standard"
+    },
+    {
+      label: "C++ Tutorials",
+      url: "https://cplusplus.com/doc/"
+    },
+    {
+      label: "C++ Tutorials W3Schools",
+      url: "https://www.w3schools.com/cpp/"
+    },
+  ],
+  CSharp:
+  [
     {
       label: "C# Docs",
       url: "https://learn.microsoft.com/en-us/dotnet/csharp/"
     }
   ],
-  Unity: [
+  Unity:
+  [
     {
       label: "Unity Manual",
       url: "https://docs.unity3d.com/Manual/index.html"
@@ -174,31 +231,36 @@ export const SkillsResources: Record<string, { label: string; url: string }[]> =
   // ===============================
   // Tools & Utilities
   // ===============================
-  Git: [
+  Git:
+  [
     {
       label: "Git Docs",
       url: "https://git-scm.com/doc"
     }
   ],
-  GitHub: [
+  GitHub:
+  [
     {
       label: "GitHub Docs",
       url: "https://docs.github.com/en"
     }
   ],
-  Insomnia: [
+  Insomnia:
+  [
     {
       label: "Insomnia Docs",
       url: "https://docs.insomnia.rest/"
     }
   ],
-  Postman: [
+  Postman:
+  [
     {
       label: "Postman Learning Center",
       url: "https://learning.postman.com/"
     }
   ],
-  VSCode: [
+  VSCode:
+  [
     {
       label: "VS Code Docs",
       url: "https://code.visualstudio.com/docs"
@@ -208,6 +270,41 @@ export const SkillsResources: Record<string, { label: string; url: string }[]> =
   // ===============================
   // Cisco / IT Networking (TODO)
   // ===============================
+
+  Cisco:
+  [
+    {
+      label: "Cisco U",
+      url: "https://u.cisco.com/"
+    },
+    {
+      label: "Cisco NetAcad",
+      url: "https://www.netacad.com/"
+    }
+  ],
+  Subnetting:
+  [
+    {
+      label: "Configuring IP Addresses and Unique Subnets",
+      url: "https://www.cisco.com/c/en/us/support/docs/ip/routing-information-protocol-rip/13788-3.html"
+    }
+  ],
+  PacketTracer:
+  [
+    {
+      label: "Packet Tracer Tutorials",
+      url: "https://tutorials.ptnetacad.net/"
+    },
+    {
+      label: "Cisco Packet Tracer",
+      url: "https://www.netacad.com/cisco-packet-tracer"
+    },
+    {
+      label: "Packet Tracker on Cisco Learning Network",
+      url: "https://learningnetwork.cisco.com/s/packet-tracer-alternative-lab-solutions"
+    }
+  ]
+
   // Placeholder for future networking resources like:
   // - Cisco Packet Tracer
   // - CCNA Study Guides

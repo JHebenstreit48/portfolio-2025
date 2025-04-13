@@ -3,13 +3,8 @@
     "version": "1.0.0",
     "private": true,
     "scripts": {
-      "dev": "npm --prefix client run dev",
-      "build": "npm --prefix client run build",
-      "start:backend": "node backend/index.js",
-      "start:dev": "concurrently \"npm run dev\" \"npm run start:backend\""
-    },
-    "devDependencies": {
-      "concurrently": "^8.2.0"
+        "dev": "npm --prefix client run dev",
+        "build": "npm --prefix client run build",
+        "start:backend": "node backend/index.js"
     }
-  }
-  
+}

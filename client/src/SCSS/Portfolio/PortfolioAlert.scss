@@ -1,0 +1,45 @@
+/* =============================
+   Variables
+   ============================= */
+   $alert-height: 50px;
+   $icon-size: 25px;
+   $icon-width: 40px;
+   $button-margin-left: 95rem;
+   $message-width: 30rem;
+   
+   /* =============================
+      Alert Container
+      ============================= */
+   .alert {
+     height: $alert-height;
+     margin: 30px 0 80px 0;
+   }
+   
+   /* =============================
+      Bootstrap Icon
+      ============================= */
+   .bi {
+     display: flex;
+     height: $icon-size;
+     width: $icon-width;
+   }
+   
+   /* =============================
+      Message Text
+      ============================= */
+   .message p {
+     flex-wrap: nowrap;
+     flex-direction: row;
+     align-items: center;
+     margin-bottom: 0;
+     width: $message-width;
+   }
+   
+   /* =============================
+      Dismiss Button
+      ============================= */
+   .btn-close {
+     display: flex;
+     margin-left: $button-margin-left;
+   }
+   

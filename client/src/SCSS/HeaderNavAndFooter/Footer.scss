@@ -1,0 +1,63 @@
+/* =============================
+   Variables
+   ============================= */
+   $footer-bg: rgb(41, 41, 41);
+   $footer-text: rgb(255, 255, 255);
+   $icon-size: 2rem;
+   $spacing-sm: 1rem;
+   $spacing-md: 1.5rem;
+   $spacing-lg: 2rem;
+   
+   /* =============================
+      Footer Container
+      ============================= */
+   .footer {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     background-color: $footer-bg;
+     color: $footer-text;
+     padding: $spacing-sm;
+     text-align: center;
+   
+     /* ========== Responsive: Small Screens ========== */
+     @media only screen and (max-width: 464px) {
+       margin-top: 2.5rem;
+       color: $footer-text;
+   
+       p {
+         margin-top: 0.4rem;
+       }
+     }
+   }
+   
+   /* =============================
+      Social Media Link Containers
+      ============================= */
+   .GitHub-link {
+     display: flex;
+     margin-left: $spacing-md;
+     margin-right: $spacing-lg;
+     margin-bottom: $spacing-sm;
+   }
+   
+   .LinkedIn-link {
+     display: flex;
+     margin-right: $spacing-sm;
+     margin-bottom: $spacing-sm;
+   }
+   
+   /* =============================
+      Social Media Icons
+      ============================= */
+   .GitHub {
+     color: $footer-text;
+     font-size: $icon-size;
+   }
+   
+   .LinkedIn {
+     color: $footer-text;
+     font-size: $icon-size;
+   }
+   

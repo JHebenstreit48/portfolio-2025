@@ -8,12 +8,19 @@
     "strict": true,
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "rootDir": "src",                         // ✅ NEW
+    "baseUrl": ".",                           // ✅ Enables alias support
+    "paths": {
+      "@graphql/*": ["src/graphql/*"],
+      "@utils/*": ["src/utils/*"],
+      "@loaders/*": ["src/loaders/*"]
+    }
   },
   "ts-node": {
     "esm": true,
     "transpileOnly": true
   },
-  "include": ["./**/*.mts"],
+  "include": ["src/**/*.mts"],               // ✅ Updated
   "exclude": ["node_modules"]
 }

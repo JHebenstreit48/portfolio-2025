@@ -4,10 +4,10 @@
   "description": "GraphQL backend for portfolio contact form",
   "main": "index.ts",
   "type": "module",
-"scripts": {
-  "dev": "node --loader ts-node/esm server.mts",
-  "start": "node --loader ts-node/esm server.mts"
-},
+  "scripts": {
+    "dev": "node --loader ts-node/esm src/server.mts",
+    "start": "node --loader ts-node/esm src/server.mts"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

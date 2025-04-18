@@ -9,7 +9,7 @@ export default function About() {
 
       <div>
 
-        <div>
+        <div className="profilePictureContainer">
           <img className='profilePicture' src={ProfilePicture} alt='Profile Picture' />
         </div>
 

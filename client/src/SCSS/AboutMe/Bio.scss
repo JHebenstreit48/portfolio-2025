@@ -4,13 +4,6 @@ $box-glow: rgb(0, 219, 248);
 $deep-blue: rgba(13, 9, 46, 0.247);
 $teal-shadow: rgb(2, 40, 51);
 
-$gradient-deepblue-cyan: linear-gradient(
-  to bottom,
-  rgb(16, 7, 97) 6%,
-  rgb(2, 211, 211) 55%,
-  rgb(16, 7, 97) 95%
-);
-
 $text-color: white;
 $text-shadow: 5px 3px 11px $teal-shadow;
 
@@ -35,34 +28,19 @@ $font-lg: 1.5rem;
   font-size: $font-lg;
 
   @media only screen and (max-width: 390px) {
-    background-image: $gradient-deepblue-cyan;
     width: 95%;
     margin: 3rem auto 0 auto;
   }
 
-.bio {
-  margin-top: 2rem;
-  width: 80%;
-  padding: 0;
+  .bio {
+    margin-top: 2rem;
+    width: 90%;
+    padding-bottom: 0;
 
-  @media only screen and (max-width: 390px) {
-    margin-top: 1.5rem;
-    font-size: 1rem;
-    padding: 0 1rem;
+    @media only screen and (max-width: 390px) {
+      margin-top: 1.5rem;
+      font-size: 1rem;
+      padding: 0 1rem;
+    }
   }
-}
-
-.learning {
-  width: 85%;
-  margin: 0 auto 1rem auto;
-}
-
-.currentFocus {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 67%;
-  margin: 0 auto;
-}
 }

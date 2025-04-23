@@ -1,4 +1,4 @@
-import ProfilePicture from '@/assets/images/profilePicture.jpg';
+import ProfilePicture from '@/assets/images/ProfilePicture.jpg';
 import '@/SCSS/AboutMe/AboutMe.scss';
 import Bio from '@/components/About/Bio';
 

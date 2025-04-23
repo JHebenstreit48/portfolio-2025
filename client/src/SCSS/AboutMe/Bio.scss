@@ -26,6 +26,7 @@ $font-lg: 1.5rem;
   width: $width-large;
   margin: 1rem auto 16.5rem auto;
   font-size: $font-lg;
+  padding-bottom: 2rem;
 
   @media only screen and (max-width: 390px) {
     width: 95%;

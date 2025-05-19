@@ -9,8 +9,8 @@
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "dist",
-    "rootDir": "src",                         // ✅ NEW
-    "baseUrl": ".",                           // ✅ Enables alias support
+    "rootDir": "src",
+    "baseUrl": ".",
     "paths": {
       "@graphql/*": ["src/graphql/*"],
       "@utils/*": ["src/utils/*"],
@@ -21,6 +21,6 @@
     "esm": true,
     "transpileOnly": true
   },
-  "include": ["src/**/*.mts"],               // ✅ Updated
+  "include": ["src/**/*.mts"],
   "exclude": ["node_modules"]
 }

@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .Navigation {
     display: grid;
     grid-template-columns: repeat(4, auto);

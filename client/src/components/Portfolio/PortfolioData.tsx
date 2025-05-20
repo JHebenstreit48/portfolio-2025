@@ -56,6 +56,12 @@ const portfolioData: IPortfolioCard[] = [
         description: 'A web application for my notes on all things Cisco and IT networking related.',
         gitHubRepo: 'https://github.com/JHebenstreit48/NetNotes',
         deployment: 'https://netnotes.netlify.app/'
+    },
+    {
+        image: Images.PixelProse,
+        name: 'PixelProse',
+        description: "A web application for my notes on all things console gaming related.",
+        gitHubRepo: '',
     }
 ];
 

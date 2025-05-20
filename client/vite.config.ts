@@ -16,4 +16,12 @@ export default defineConfig({
       '@css': path.resolve(__dirname, 'src/css'),
     },
   },
+  server: {
+    proxy: {
+      '/graphql': {
+        target: 'http://localhost:3001',
+        changeOrigin: true,
+      },
+    },
+  },
 });
